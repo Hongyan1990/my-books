@@ -2,8 +2,8 @@
     <header>
         <!--<h1 :class="$style.myTitle">积分商城</h1>-->
       <div class="my-header">
-        <div class="logo" style="color: #4d3cff"><span class="logo-icon"></span>考勤管理</div>
-        <div class="user-info"><span style="color: #4d3cff;font-weight: 777;">{{userName}}</span>员工，您好，今天是<span>{{nowDate}}</span><span class="login-out" @click="loginOut">退出</span></div>
+        <div class="logo"><span class="logo-icon"></span>BMS</div>
+        <div class="user-info"><span >{{userName}}</span>员工，您好，今天是<span>{{nowDate}}</span><span class="login-out" @click="loginOut">退出</span></div>
       </div>
     </header>
 </template>
@@ -40,22 +40,24 @@
     width: 40px;
     height: 40px;
     display: inline-block;
-    background: url("../static/kaoqin.png") center no-repeat;
+    margin-right: 5px;
+    background: url("../static/books.png") center no-repeat;
     background-size: contain;
   }
   .my-header {
-    padding: 0 5px;
-    background-color: #fff;
+    background-color: #545c64;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #555;
+    color: #fff;
+    padding: 5px 10px;
     box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2), 0px 3px 10px 0px rgba(0, 0, 0, 0.19);
   }
   .logo {
     align-items: center;
     display: flex;
     font-family: fantasy;
+    font-weight: 777;
   }
   .login-out {
     display: inline-block;

@@ -1,24 +1,18 @@
 <template>
 	<div class="my-box">
-		<div class="content" :style="{height: localHeight + 'px'}">
-			<order-header></order-header>
-			
-			<div class="main" :style="{height: localHeight - 90 + 'px'}">
-				<router-view></router-view>
-			</div>
-			
-		</div>
-		<!-- <el-container :style="{height: localHeight + 'px'}">
-		  <el-header style="padding: 0px;">
+		<el-container :style="{height: localHeight + 'px'}">
+		  <el-header style="padding: 0px;height:55px;">
 		  	<order-header></order-header>
 		  </el-header>
 		  <el-container>
-		    <el-aside width="200px" style="background-color: #545c64;">
+		    <el-aside width="200px" style="background-color: #545c64;overflow-y: auto;overflow-x: hidden;" :style="{maxHeight: localHeight-55 + 'px'}">
 		    	<new-menu></new-menu>
 		    </el-aside>
-		    <el-main>Main</el-main>
+		    <el-main  style="overflow-y: auto;overflow-x: hidden;" :style="{maxHeight: localHeight-55 + 'px'}">
+		    	<router-view></router-view>
+		    </el-main>
 		  </el-container>
-		</el-container> -->	
+		</el-container>	
 	</div>
 </template>
 

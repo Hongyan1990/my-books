@@ -2,15 +2,15 @@
 	<div>
 		<el-row>
 		  <el-col :span="24">
-		  	<h5>供应商信息</h5>
+		  	<h5>会员信息</h5>
 		  </el-col>
 		</el-row>
 		<el-form :inline="true" class="demo-form-inline" style="text-align: center;">
 		  <el-form-item label="编号">
 		    <el-input placeholder="编号"></el-input>
 		  </el-form-item>
-		  <el-form-item label="供应商名称">
-		    <el-input placeholder="供应商名称"></el-input>
+		  <el-form-item label="会员姓名">
+		    <el-input placeholder="会员姓名"></el-input>
 		  </el-form-item>
 		</el-form>
 		<el-row>
@@ -40,27 +40,21 @@
 			      </template>
 			    </el-table-column>
 			    <el-table-column
-			      label="供应商名称">
+			      label="姓名">
 			      <template slot-scope="scope">
 			        <span>{{scope.row.p_name}}</span>
 			      </template>
 			    </el-table-column>
 			    <el-table-column
-			      label="负责人姓名">
+			      label="性别">
 			      <template slot-scope="scope">
-			        <span>{{scope.row.name}}</span>
+			        <span>{{scope.row.sex}}</span>
 			      </template>
 			    </el-table-column>
 			    <el-table-column
 			      label="联系电话">
 			      <template slot-scope="scope">
 			        <span>{{scope.row.phone}}</span>
-			      </template>
-			    </el-table-column>
-			    <el-table-column
-			      label="地址">
-			      <template slot-scope="scope">
-			        <span>{{scope.row.address}}</span>
 			      </template>
 			    </el-table-column>
 			    
@@ -77,21 +71,21 @@
 			    </el-table-column>
 			  </el-table>
 		  </el-main>
-		 <add-menu 
+		 <add-member
 			:isShowDialog="dialogFormVisible"
 			@closeCreateMenuDialog="closeCreateMenuDialog">
-		</add-menu>
+		</add-member>
 	</div>
 </template>
 <script>
 	import {getAllMenus, addOrder} from '../model/client-model.js'
-	import AddMenu from './AddMenu.vue'
+	import AddMember from './AddMember.vue'
 	import EditMenu from './EditMenu.vue'
 	import imgUrl from '../static/no-data2.png'
 	export default {
 		name: 'provider-info',
 		components: {
-			AddMenu, EditMenu
+			AddMember, EditMenu
 		},
 		data () {
 			return {

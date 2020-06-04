@@ -16,26 +16,26 @@
         </template>
         <el-menu-item index="1-1" route="/bookinfo">书目信息</el-menu-item>
         <el-menu-item index="1-2" route="/providerinfo">供应商信息</el-menu-item>
-        <el-menu-item index="1-3">会员信息</el-menu-item>
+        <el-menu-item index="1-3" route="/memeber">会员信息</el-menu-item>
       </el-submenu>
       <el-submenu index="2">
         <template slot="title">
           <i class="el-icon-location"></i>
           <span>采购管理</span>
         </template>
-        <el-menu-item index="2-1" >采购图书</el-menu-item>
-        <el-menu-item index="2-2">采购查询</el-menu-item>
-        <el-menu-item index="2-3">采购统计</el-menu-item>
+        <el-menu-item index="2-1" route="/pb">采购图书</el-menu-item>
+        <el-menu-item index="2-2"  route="/pq">采购查询</el-menu-item>
+        <el-menu-item index="2-3" route="/ps">采购统计</el-menu-item>
       </el-submenu>
       <el-submenu index="3">
         <template slot="title">
           <i class="el-icon-location"></i>
           <span>销售管理</span>
         </template>
-        <el-menu-item index="3-1">退书处理</el-menu-item>
-        <el-menu-item index="3-2">图书销售</el-menu-item>
-        <el-menu-item index="3-3">销售查询</el-menu-item>
-        <el-menu-item index="3-4">销售统计</el-menu-item>
+        <el-menu-item index="3-1" route="/rb">退书处理</el-menu-item>
+        <el-menu-item index="3-2" route="/booksell">图书销售</el-menu-item>
+        <el-menu-item index="3-3" route="/booksellquery">销售查询</el-menu-item>
+        <el-menu-item index="3-4" route="/bss">销售统计</el-menu-item>
       </el-submenu>
       <el-submenu index="4">
         <template slot="title">

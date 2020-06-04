@@ -1,14 +1,14 @@
 <template>
 	<div class="my-box">
-		<el-container :style="{height: localHeight + 'px'}">
+		<el-container :style="{height: localHeight-5 + 'px'}">
 		  <el-header style="padding: 0px;height:55px;">
 		  	<order-header></order-header>
 		  </el-header>
 		  <el-container>
-		    <el-aside width="200px" style="background-color: #545c64;overflow-y: auto;overflow-x: hidden;" :style="{maxHeight: localHeight-55 + 'px'}">
+		    <el-aside width="200px" style="background-color: #545c64;overflow-y: auto;overflow-x: hidden;" :style="{maxHeight: localHeight-60 + 'px'}">
 		    	<new-menu></new-menu>
 		    </el-aside>
-		    <el-main  style="overflow-y: auto;overflow-x: hidden;" :style="{maxHeight: localHeight-55 + 'px'}">
+		    <el-main  style="overflow-y: auto;overflow-x: hidden;" :style="{maxHeight: localHeight-60 + 'px'}">
 		    	<router-view></router-view>
 		    </el-main>
 		  </el-container>

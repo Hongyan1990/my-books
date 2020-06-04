@@ -2,7 +2,7 @@
     <header>
         <!--<h1 :class="$style.myTitle">积分商城</h1>-->
       <div class="my-header">
-        <div class="logo"><span class="logo-icon"></span>BMS</div>
+        <div class="logo"><span class="logo-icon"></span>Books Manager System</div>
         <div class="user-info"><span >{{userName}}</span>员工，您好，今天是<span>{{nowDate}}</span><span class="login-out" @click="loginOut">退出</span></div>
       </div>
     </header>

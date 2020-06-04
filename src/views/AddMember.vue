@@ -1,20 +1,20 @@
 <template>
 	<div>
-		<el-dialog  :close-on-click-modal="false" title="供应商信息" :visible.sync="dialogVisibale">
+		<el-dialog  :close-on-click-modal="false" title="会员管理" :visible.sync="dialogVisibale">
 	      <el-form  label-width="90px"  :inline="true" :model="rowData"  class="demo-form-inline">
-			    <el-form-item label="供应商名称">
+			    <el-form-item label="会员姓名">
 			      <el-input v-model="rowData.shopname" autocomplete="off"></el-input>
 			    </el-form-item>
-			    <el-form-item label="负责人姓名">
+			    <el-form-item label="出生日期">
 			      <el-input v-model="rowData.address" autocomplete="off"></el-input>
 			    </el-form-item>
-			    <el-form-item label="联系电话">
+			    <el-form-item label="性别">
 			      <el-input v-model="rowData.phone" autocomplete="off"></el-input>
 			    </el-form-item>
-			    <el-form-item label="传真">
+			    <el-form-item label="联系电话">
 			      <el-input v-model="rowData.open_time" autocomplete="off"></el-input>
 			    </el-form-item>
-			    <el-form-item label="地址">
+			    <el-form-item label="积分">
 			      <el-input v-model="rowData.delivery_time" autocomplete="off"></el-input>
 			    </el-form-item>
 			    <el-form-item label="备注">

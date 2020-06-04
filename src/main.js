@@ -5,14 +5,13 @@ import {
   Button, Container, Header, Main, Row, Col,
   Table, TableColumn, Dialog, Input, Form, FormItem,
   Tooltip, Upload, Loading, Message, Tabs, TabPane, Aside,
-  Menu,
-  Submenu,
-  MenuItem,
-  MenuItemGroup,
+  Menu, Submenu, MenuItem, MenuItemGroup, DatePicker, Select
 } from 'element-ui'
-
+import VeLine from 'v-charts/lib/line.common'
+import VeHistogram from 'v-charts/lib/histogram.common'
 import App from './app.vue'
-// /home/hongyan/Desktop/hongyan/my-order/dist
+
+// /home/hongyan/Desktop/hongyan/my-order/dist histogram.common
 import router from './routes/router.js'
 import createStore from './store/store.js'
 import cookie from './util/cookie.js'
@@ -43,8 +42,12 @@ Vue.use(Menu)
 Vue.use(Submenu)
 Vue.use(MenuItemGroup)
 Vue.use(MenuItem)
+Vue.use(DatePicker)
+Vue.use(Select)
 Vue.prototype.$message = Message
 
+Vue.component(VeLine.name, VeLine)
+Vue.component(VeHistogram.name, VeHistogram)
 const store = createStore()
 
 router.beforeEach((to, from, next) => {

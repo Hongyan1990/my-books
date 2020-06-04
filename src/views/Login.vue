@@ -1,6 +1,6 @@
-<template>
+<template> 
   <div class="login-bg">
-    <h1>考勤管理</h1>
+    <h1>Books Manager System</h1>
     <form class="login" @submit="login">
       <h2>
         <span>Login</span>
@@ -33,7 +33,7 @@ export default {
     login (e) {
     	e.preventDefault()
     	if(this.validteForm()) {
-    		cookie.setCookie('username', this.username, 1)
+	       cookie.setCookie('username', this.username, 1)
         if(this.username === 'admin') {
           this.$router.push('/order')
         } else {

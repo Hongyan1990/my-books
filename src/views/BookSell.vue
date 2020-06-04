@@ -2,21 +2,7 @@
 	<div>
 		<el-row>
 		  <el-col :span="24">
-		  	<h5>供应商信息</h5>
-		  </el-col>
-		</el-row>
-		<el-form :inline="true" class="demo-form-inline" style="text-align: center;">
-		  <el-form-item label="编号">
-		    <el-input placeholder="编号"></el-input>
-		  </el-form-item>
-		  <el-form-item label="供应商名称">
-		    <el-input placeholder="供应商名称"></el-input>
-		  </el-form-item>
-		</el-form>
-		<el-row>
-		  <el-col :span="24" style="text-align: center;">
-		  	<el-button>重置</el-button>
- 	 			<el-button type="primary">查询</el-button>
+		  	<h5 style="padding-bottom: 15px;">图书销售</h5>
 		  </el-col>
 		</el-row>
 		<el-main>
@@ -77,21 +63,21 @@
 			    </el-table-column>
 			  </el-table>
 		  </el-main>
-		 <add-menu 
+		 <booksell-info 
 			:isShowDialog="dialogFormVisible"
 			@closeCreateMenuDialog="closeCreateMenuDialog">
-		</add-menu>
+		</booksell-info>
 	</div>
 </template>
 <script>
 	import {getAllMenus, addOrder} from '../model/client-model.js'
-	import AddMenu from './AddMenu.vue'
+	import BooksellInfo from './BooksellInfo.vue'
 	import EditMenu from './EditMenu.vue'
 	import imgUrl from '../static/no-data2.png'
 	export default {
 		name: 'provider-info',
 		components: {
-			AddMenu, EditMenu
+			BooksellInfo, EditMenu
 		},
 		data () {
 			return {

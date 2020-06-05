@@ -34,31 +34,31 @@
 			    <el-table-column
 			      label="图书编号">
 			      <template slot-scope="scope">
-			        <span style="margin-left: 10px">{{ scope.row.rowKey }}</span>
+			        <span style="margin-left: 10px">{{ scope.row.a }}</span>
 			      </template>
 			    </el-table-column>
 			    <el-table-column
 			      label="图书名">
 			      <template slot-scope="scope">
-			        <span>{{scope.row.shopname}}</span>
+			        <span>{{scope.row.b}}</span>
 			      </template>
 			    </el-table-column>
 			    <el-table-column
 			      label="出版社">
 			      <template slot-scope="scope">
-			        <span>{{scope.row.food_name}}</span>
+			        <span>{{scope.row.c}}</span>
 			      </template>
 			    </el-table-column>
 			    <el-table-column
 			      label="定价">
 			      <template slot-scope="scope">
-			        <span>{{scope.row.address}}</span>
+			        <span>{{scope.row.d}}</span>
 			      </template>
 			    </el-table-column>
 			    <el-table-column
 			      label="供应商">
 			      <template slot-scope="scope">
-			        <span>{{scope.row.open_time}}</span>
+			        <span>{{scope.row.e}}</span>
 			      </template>
 			    </el-table-column>
 			  </el-table>
@@ -73,7 +73,12 @@
 		data () {
 			return {
 				imgUrl,
-				bookInfoData: []
+				bookInfoData: [
+					{a: 'TP-01267956', b: 'JavaScript高级指南', c: '工业出版社', d: '80.00', e: '新华书店'},
+					{a: 'TP-01267956', b: '数学之美', c: '清华大学出版社', d: '70.00', e: '新华书店'},
+					{a: 'TP-01267956', b: '算法', c: '人民出版社', d: '100.00', e: '新华书店'},
+					{a: 'TP-01267956', b: '深入react', c: '科技出版社', d: '100.00', e: '新华书店'}
+				]
 			}
 		}
 	}

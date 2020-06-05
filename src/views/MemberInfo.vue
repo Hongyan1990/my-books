@@ -95,9 +95,26 @@
 				tableData: [],
         multipleSelection: [],
         recommendData: [{
-        	id: '1234',
-        	p_name: '新华书店'
-        }],
+        	id: '01',
+        	p_name: '王强',
+        	sex: '男',
+        	phone: '13689901355'
+        },{
+        	id: '02',
+        	p_name: '张志光',
+        	sex: '男',
+        	phone: '13689901355'
+        },{
+        	id: '03',
+        	p_name: '刘美丽',
+        	sex: '女',
+        	phone: '13689901355'
+        },{
+        	id: '04',
+        	p_name: '赵振',
+        	sex: '男',
+        	phone: '13689901355'
+        },],
         imgUrl,
         dialogFormVisible: false,
         editDialogFormVisible: false

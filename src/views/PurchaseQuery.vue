@@ -37,43 +37,43 @@
 			    <el-table-column
 			      label="图书编号">
 			      <template slot-scope="scope">
-			        <span style="margin-left: 10px">{{ scope.row.rowKey }}</span>
+			        <span style="margin-left: 10px">{{ scope.row.a }}</span>
 			      </template>
 			    </el-table-column>
 			    <el-table-column
 			      label="图书名">
 			      <template slot-scope="scope">
-			        <span>{{scope.row.shopname}}</span>
+			        <span>{{scope.row.b}}</span>
 			      </template>
 			    </el-table-column>
 			    <el-table-column
 			      label="供应商">
 			      <template slot-scope="scope">
-			        <span>{{scope.row.food_name}}</span>
+			        <span>{{scope.row.c}}</span>
 			      </template>
 			    </el-table-column>
 			    <el-table-column
 			      label="仓库名称">
 			      <template slot-scope="scope">
-			        <span>{{scope.row.address}}</span>
+			        <span>{{scope.row.d}}</span>
 			      </template>
 			    </el-table-column>
 			    <el-table-column
 			      label="数量">
 			      <template slot-scope="scope">
-			        <span>{{scope.row.open_time}}</span>
+			        <span>{{scope.row.e}}</span>
 			      </template>
 			    </el-table-column>
 			    <el-table-column
 			      label="进货单价">
 			      <template slot-scope="scope">
-			        <span>{{scope.row.open_time}}</span>
+			        <span>{{scope.row.f}}</span>
 			      </template>
 			    </el-table-column>
 			    <el-table-column
 			      label="销售单价">
 			      <template slot-scope="scope">
-			        <span>{{scope.row.open_time}}</span>
+			        <span>{{scope.row.g}}</span>
 			      </template>
 			    </el-table-column>
 			  </el-table>
@@ -88,7 +88,12 @@
 		data () {
 			return {
 				imgUrl,
-				bookInfoData: []
+				bookInfoData: [
+					{a: 'TP-01267956', b: 'JavaScript高级指南', c: '新华书店', d: '南部仓库', e: '89', f: '50.00', g: '80.00'},
+					{a: 'TP-01267956', b: '数学之美', c: '新华书店', d: '南部仓库', e: '89', f: '50.00', g: '80.00'},
+					{a: 'TP-01267956', b: '算法', c: '新华书店', d: '南部仓库', e: '89', f: '50.00', g: '80.00'},
+					{a: 'TP-01267956', b: '深入react', c: '新华书店', d: '南部仓库', e: '89', f: '50.00', g: '80.00'},
+				]
 			}
 		}
 	}

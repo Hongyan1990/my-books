@@ -101,8 +101,29 @@
 				tableData: [],
         multipleSelection: [],
         recommendData: [{
-        	id: '1234',
-        	p_name: '新华书店'
+        	id: '00128945B',
+        	p_name: '新华书店',
+        	name: '李存峰',
+        	phone: '13689901355',
+        	address: '北京市海淀区'
+        },{
+        	id: '00128945B',
+        	p_name: '新华书店',
+        	name: '李存峰',
+        	phone: '13689901355',
+        	address: '北京市海淀区'
+        },{
+        	id: '00128945B',
+        	p_name: '新华书店',
+        	name: '李存峰',
+        	phone: '13689901355',
+        	address: '北京市海淀区'
+        },{
+        	id: '00128945B',
+        	p_name: '新华书店',
+        	name: '李存峰',
+        	phone: '13689901355',
+        	address: '北京市海淀区'
         }],
         imgUrl,
         dialogFormVisible: false,

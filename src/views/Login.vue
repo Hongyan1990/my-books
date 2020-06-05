@@ -1,6 +1,6 @@
 <template> 
   <div class="login-bg">
-    <h1>Books Manager System</h1>
+    <h1>外文图书采购系统</h1>
     <form class="login" @submit="login">
       <h2>
         <span>Login</span>

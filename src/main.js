@@ -5,7 +5,8 @@ import {
   Button, Container, Header, Main, Row, Col,
   Table, TableColumn, Dialog, Input, Form, FormItem,
   Tooltip, Upload, Loading, Message, Tabs, TabPane, Aside,
-  Menu, Submenu, MenuItem, MenuItemGroup, DatePicker, Select
+  Menu, Submenu, MenuItem, MenuItemGroup, DatePicker, Select,
+  Option
 } from 'element-ui'
 import VeLine from 'v-charts/lib/line.common'
 import VeHistogram from 'v-charts/lib/histogram.common'
@@ -44,6 +45,7 @@ Vue.use(MenuItemGroup)
 Vue.use(MenuItem)
 Vue.use(DatePicker)
 Vue.use(Select)
+Vue.use(Option)
 Vue.prototype.$message = Message
 
 Vue.component(VeLine.name, VeLine)
@@ -52,7 +54,9 @@ const store = createStore()
 
 router.beforeEach((to, from, next) => {
   const username = cookie.getCookie('username')
+  const auth = cookie.getCookie('auth')
   store.dispatch('saveUsername', username)
+  store.dispatch('saveAuth', auth)
   if(username === null && to.path !== '/login') {
   	next('/login')
   } else {

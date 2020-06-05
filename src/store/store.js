@@ -6,17 +6,24 @@ Vue.use(Vuex)
 export default function createStore() {
 	return new Vuex.Store({
 		state: {
-			username: ''
+			username: '',
+			auth: ''
 		},
 		actions: {
 			saveUsername({commit}, name) {
 				commit('setUsername', {name})
-			}
+			},
+			saveAuth({commit}, auth) {
+				commit('setAuth', {auth})
+			},
 		},
 		mutations: {
 			setUsername(state, {name}) {
 				state.username = name
-			}
+			},
+			setAuth(state, {auth}) {
+				state.auth = auth
+			},
 		}
 	})
 }

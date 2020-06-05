@@ -47,6 +47,34 @@ const routes = [
 		component: () => import('../views/BooksellStatistic.vue')
 	},
 	{
+		path: '/bis',
+		component: () => import('../views/BookInStorage.vue')
+	},//
+	{
+		path: '/bos',
+		component: () => import('../views/BookOutStorage.vue')
+	},
+	{
+		path: '/sa',
+		component: () => import('../views/StorageAlarm.vue')
+	},
+	{
+		path: '/sq',
+		component: () => import('../views/StorageQuery.vue')
+	},
+	{
+		path: '/sb',
+		component: () => import('../views/SystemBackup.vue')
+	},
+	{
+		path: '/sr',
+		component: () => import('../views/SystemRecovery.vue')
+	},
+	{
+		path: '/em',
+		component: () => import('../views/EmployeeManager.vue')
+	},
+	{
 		path: '/login',
 		component: () => import('../views/Login.vue')
 	}

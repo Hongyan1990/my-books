@@ -1,34 +1,38 @@
 <template>
 	<div>
-		<el-dialog  :close-on-click-modal="false" title="图书销售信息" :visible.sync="dialogVisibale">
+		<el-dialog  :close-on-click-modal="false" title="员工管理" :visible.sync="dialogVisibale">
 	      <el-form  label-width="90px"  :inline="true" :model="rowData"  class="demo-form-inline">
-			    <el-form-item label="销售编号">
+			    <el-form-item label="员工姓名">
 			      <el-input v-model="rowData.shopname" autocomplete="off"></el-input>
 			    </el-form-item>
-			    <el-form-item label="图书名称">
+			    <el-form-item label="出生日期">
 			      <el-input v-model="rowData.address" autocomplete="off"></el-input>
 			    </el-form-item>
-			    <el-form-item label="时间">
+			    <el-form-item label="性别">
 			      <el-input v-model="rowData.phone" autocomplete="off"></el-input>
 			    </el-form-item>
-			    <el-form-item label="销售单价">
+			    <el-form-item label="系统登录名">
+			      <el-input v-model="rowData.phone" autocomplete="off"></el-input>
+			    </el-form-item>
+			    <el-form-item label="登录密码">
+			      <el-input v-model="rowData.phone" autocomplete="off"></el-input>
+			    </el-form-item>
+			    <el-form-item label="员工职位">
+			      <el-input v-model="rowData.phone" autocomplete="off"></el-input>
+			    </el-form-item>
+			    <el-form-item label="家庭电话">
+			      <el-input v-model="rowData.phone" autocomplete="off"></el-input>
+			    </el-form-item>
+			    <el-form-item label="手机号码">
 			      <el-input v-model="rowData.open_time" autocomplete="off"></el-input>
 			    </el-form-item>
-			    <el-form-item label="销售数量">
+			    <el-form-item label="所属部门">
 			      <el-input v-model="rowData.delivery_time" autocomplete="off"></el-input>
 			    </el-form-item>
-			    <el-form-item label="员工">
+			    <el-form-item label="家庭地址">
 			      <el-input v-model="rowData.scores" autocomplete="off"></el-input>
 			    </el-form-item>
-			    <el-form-item label="应付金额">
-			      <el-input v-model="rowData.open_time" autocomplete="off"></el-input>
-			    </el-form-item>
-			    <el-form-item label="实付金额">
-			      <el-input v-model="rowData.delivery_time" autocomplete="off"></el-input>
-			    </el-form-item>
-			    <el-form-item label="备注">
-			      <el-input v-model="rowData.scores" autocomplete="off"></el-input>
-			    </el-form-item>
+			    
 			  </el-form>
 	      <div slot="footer" class="dialog-footer">
 	        <el-button @click="closeAddMenuDialog">取 消</el-button>

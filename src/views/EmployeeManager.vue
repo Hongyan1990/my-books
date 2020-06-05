@@ -2,7 +2,21 @@
 	<div>
 		<el-row>
 		  <el-col :span="24">
-		  	<h5 style="padding-bottom: 15px;">图书销售</h5>
+		  	<h5>员工信息管理</h5>
+		  </el-col>
+		</el-row>
+		<el-form :inline="true" class="demo-form-inline" style="text-align: center;">
+		  <el-form-item label="编号">
+		    <el-input placeholder="编号"></el-input>
+		  </el-form-item>
+		  <el-form-item label="员工姓名">
+		    <el-input placeholder="员工姓名"></el-input>
+		  </el-form-item>
+		</el-form>
+		<el-row>
+		  <el-col :span="24" style="text-align: center;">
+		  	<el-button>重置</el-button>
+ 	 			<el-button type="primary">查询</el-button>
 		  </el-col>
 		</el-row>
 		<el-main>
@@ -20,33 +34,39 @@
 	                <p style="margin: 0; line-height: 30px">暂无数据</p>
 	    		</template>
 			    <el-table-column
-			      label="编号">
+			      label="员工编号">
 			      <template slot-scope="scope">
 			        <span style="margin-left: 10px">{{ scope.row.id }}</span>
 			      </template>
 			    </el-table-column>
 			    <el-table-column
-			      label="供应商名称">
+			      label="员工姓名">
 			      <template slot-scope="scope">
 			        <span>{{scope.row.p_name}}</span>
 			      </template>
 			    </el-table-column>
 			    <el-table-column
-			      label="负责人姓名">
+			      label="性别">
 			      <template slot-scope="scope">
-			        <span>{{scope.row.name}}</span>
+			        <span>{{scope.row.sex}}</span>
+			      </template>
+			    </el-table-column>
+			    <el-table-column
+			      label="所在部门">
+			      <template slot-scope="scope">
+			        <span>{{scope.row.sex}}</span>
+			      </template>
+			    </el-table-column>
+			    <el-table-column
+			      label="员工职位">
+			      <template slot-scope="scope">
+			        <span>{{scope.row.sex}}</span>
 			      </template>
 			    </el-table-column>
 			    <el-table-column
 			      label="联系电话">
 			      <template slot-scope="scope">
 			        <span>{{scope.row.phone}}</span>
-			      </template>
-			    </el-table-column>
-			    <el-table-column
-			      label="地址">
-			      <template slot-scope="scope">
-			        <span>{{scope.row.address}}</span>
 			      </template>
 			    </el-table-column>
 			    
@@ -63,21 +83,21 @@
 			    </el-table-column>
 			  </el-table>
 		  </el-main>
-		 <booksell-info 
+		 <employee-info
 			:isShowDialog="dialogFormVisible"
 			@closeCreateMenuDialog="closeCreateMenuDialog">
-		</booksell-info>
+		</employee-info>
 	</div>
 </template>
 <script>
 	import {getAllMenus, addOrder} from '../model/client-model.js'
-	import BooksellInfo from './BooksellInfo.vue'
+	import EmployeeInfo from './EmployeeInfo.vue'
 	import EditMenu from './EditMenu.vue'
 	import imgUrl from '../static/no-data2.png'
 	export default {
 		name: 'provider-info',
 		components: {
-			BooksellInfo, EditMenu
+			EmployeeInfo, EditMenu
 		},
 		data () {
 			return {

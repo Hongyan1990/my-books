@@ -2,15 +2,18 @@
 	<div>
 		<el-row>
 		  <el-col :span="24">
-		  	<h5>书目信息</h5>
+		  	<h5 style="padding-bottom: 15px;">库存查询</h5>
 		  </el-col>
 		</el-row>
 		<el-form :inline="true" class="demo-form-inline" style="text-align: center;">
-		  <el-form-item label="图书编号">
-		    <el-input placeholder="图书编号"></el-input>
+		  <el-form-item label="查询条件">
+		    <el-select  placeholder="请选择活动区域">
+		      <el-option label="区域一" value="shanghai"></el-option>
+		      <el-option label="区域二" value="beijing"></el-option>
+		    </el-select>
 		  </el-form-item>
-		  <el-form-item label="图书名称">
-		    <el-input placeholder="图书名称"></el-input>
+		  <el-form-item label="查询内容">
+		    <el-input placeholder="输入查询内容"></el-input>
 		  </el-form-item>
 		</el-form>
 		<el-row>
@@ -44,19 +47,19 @@
 			      </template>
 			    </el-table-column>
 			    <el-table-column
-			      label="出版社">
-			      <template slot-scope="scope">
-			        <span>{{scope.row.food_name}}</span>
-			      </template>
-			    </el-table-column>
-			    <el-table-column
-			      label="定价">
+			      label="仓库名称">
 			      <template slot-scope="scope">
 			        <span>{{scope.row.address}}</span>
 			      </template>
 			    </el-table-column>
 			    <el-table-column
-			      label="供应商">
+			      label="库存数量">
+			      <template slot-scope="scope">
+			        <span>{{scope.row.open_time}}</span>
+			      </template>
+			    </el-table-column>
+			    <el-table-column
+			      label="警报数量">
 			      <template slot-scope="scope">
 			        <span>{{scope.row.open_time}}</span>
 			      </template>

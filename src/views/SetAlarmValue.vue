@@ -1,38 +1,30 @@
 <template>
 	<div>
-		<el-dialog  :close-on-click-modal="false" title="图书销售信息" :visible.sync="dialogVisibale">
+		<el-dialog  :close-on-click-modal="false" title="设置预警值" :visible.sync="dialogVisibale">
 	      <el-form  label-width="90px"  :inline="true" :model="rowData"  class="demo-form-inline">
-			    <el-form-item label="销售编号">
+			    <el-form-item label="图书编号">
 			      <el-input v-model="rowData.shopname" autocomplete="off"></el-input>
 			    </el-form-item>
 			    <el-form-item label="图书名称">
 			      <el-input v-model="rowData.address" autocomplete="off"></el-input>
 			    </el-form-item>
-			    <el-form-item label="时间">
+			    <el-form-item label="进货单价">
 			      <el-input v-model="rowData.phone" autocomplete="off"></el-input>
 			    </el-form-item>
 			    <el-form-item label="销售单价">
 			      <el-input v-model="rowData.open_time" autocomplete="off"></el-input>
 			    </el-form-item>
-			    <el-form-item label="销售数量">
+			    <el-form-item label="进货数量">
 			      <el-input v-model="rowData.delivery_time" autocomplete="off"></el-input>
 			    </el-form-item>
-			    <el-form-item label="员工">
+			    <el-form-item label="预警数量">
 			      <el-input v-model="rowData.scores" autocomplete="off"></el-input>
 			    </el-form-item>
-			    <el-form-item label="应付金额">
-			      <el-input v-model="rowData.open_time" autocomplete="off"></el-input>
-			    </el-form-item>
-			    <el-form-item label="实付金额">
-			      <el-input v-model="rowData.delivery_time" autocomplete="off"></el-input>
-			    </el-form-item>
-			    <el-form-item label="备注">
-			      <el-input v-model="rowData.scores" autocomplete="off"></el-input>
-			    </el-form-item>
+			    
 			  </el-form>
 	      <div slot="footer" class="dialog-footer">
 	        <el-button @click="closeAddMenuDialog">取 消</el-button>
-	        <el-button type="primary" @click="addMyMenu" :disabled="validateErr">确 定</el-button>
+	        <el-button type="primary" @click="addMyMenu" :disabled="validateErr">设 置</el-button>
 	      </div>
 	    </el-dialog>
 	</div>
